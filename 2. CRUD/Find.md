@@ -18,6 +18,28 @@ Database => Shop Collection => Products
 | 2 |Book | $50 | Exciting book |
 | 3 |Car | $5000 | Good looking car |
 
+## db.collection.find()
+
+### Syntax
+
+`db.collection.find(query, projection)`
+
+- To return all documents in a collection, omit this parameter or pass an empty document ({}).
+
+  - `find()` or `find({})`
+
+- The find() method returns a cursor to the documents instead of the actual document itself.
+
+### Example
+
+```
+db.Products.find({},{id:0,description:0})
+```
+
+##### Result:
+
+_[{ name:"Chair", price: "$120" }, { name:"Book", price: "$50" }, { name:"Car", price: "$5000" }]_
+
 ## db.collection.findOne()
 
 ### Syntax
@@ -35,9 +57,10 @@ Database => Shop Collection => Products
 
 ### Example
 
-``` 
+```
 db.Products.findOne({id:1},{id:0,description:0})
 ```
 
 ##### Result:
-*{ name:"Chair", price: "$120" }*
+
+_{ name:"Chair", price: "$120" }_

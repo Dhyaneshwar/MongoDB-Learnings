@@ -12,10 +12,11 @@ The available find commands are:-
 ## Reference Table
 
 Database => Shop Collection => Products
-| id | name |price | description |
-| ----------- | ----------- |----------- | ----------- |
+| id | name |price|description|
+|----|------|------|--------|
 | 1 |Chair | $120 | A comfy chair |
 | 2 |Book | $50 | Exciting book |
+| 3 |Car | $5000 | Good looking car |
 
 ## db.collection.findOne()
 
@@ -32,12 +33,11 @@ Database => Shop Collection => Products
   > 1.  The `_id` field is included in the returned documents by default unless you explicitly specify \_id: 0 in the projection to suppress the field.
   > 2.  Although similar to the find() method, the findOne() method returns a document rather than a cursor.
 
-#### Example
+### Example
 
-    `db.Products.findOne({id:1},{id:0,description:0})`
+``` 
+db.Products.findOne({id:1},{id:0,description:0})
+```
 
-    ##### Result:
-
-    ```
-    {name:"Chair", price: $120 }
-    ```
+##### Result:
+*{ name:"Chair", price: "$120" }*

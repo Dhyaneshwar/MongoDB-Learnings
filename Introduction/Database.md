@@ -18,6 +18,6 @@ The DBMS provides database server functionality.
 
 The database server **stores** the Database Management System (DBMS) and the databases.
 
-![Database server](/Assests/Images/DatabaseServer.png)
+<img src="/Assests/Images/DatabaseServer.png" alt="Database Server" width=50% height=50%>
 
 Its main role is to receive requests from client machines, search for the required data, and pass back the results.

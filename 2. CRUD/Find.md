@@ -18,6 +18,8 @@ Database => Shop Collection => Products
 | 2 |Book | $50 | Exciting book |
 | 3 |Car | $5000 | Good looking car |
 
+---
+
 ## db.collection.find()
 
 ### Syntax
@@ -39,6 +41,8 @@ db.Products.find({},{id:0,description:0})
 ##### Result:
 
 _[{ name:"Chair", price: "$120" }, { name:"Book", price: "$50" }, { name:"Car", price: "$5000" }]_
+
+---
 
 ## db.collection.findOne()
 

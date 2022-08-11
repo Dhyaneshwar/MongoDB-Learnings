@@ -55,9 +55,11 @@ The `_id` field is included in the returned documents by default unless you expl
 A `projection` _cannot_ contain _both_ include and exclude specifications, with the exception of the `_id` field:
 
 - In projections that _explicitly include_ fields, the `_id` field is the only field that you can _explicitly exclude_.
-  <img src="/Assests/Images/InclusionProjection.jpg" alt="Inclusion" width=50% height=50%>
+
+  ![Inclusion](/Assests/Images/InclusionProjection.jpg)
 - In projections that _explicitly excludes_ fields, the `_id` field is the only field that you can _explicitly include_; however, the `_id` field is included by default.
-  <img src="/Assests/Images/ExclusionProjection.jpg" alt="Exclusion" width=50% height=50%>
+
+  ![Exclusion](/Assests/Images/ExclusionProjection.jpg)
 
 ## Understanding CURSOR
 

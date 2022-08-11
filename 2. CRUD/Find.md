@@ -61,7 +61,8 @@ _[{ name:"Chair", price: "$120" }, { name:"Book", price: "$50" }, { name:"Car", 
    > {\_id: 3, name: "Car", price: $5000}
 2. If the collection is having more than 20 documents, then when we type `myCursor` in the shell, we get:-
    > ... (first 20 documents are displayed)
-   > Type **it** for more
+   > 
+   > \>Type **it** for more
 3. Now, if we either type **`it`** or once again type the user cursor variable, `myCursor`, the remaining document will be printed.
    Once all the document that are returned by `find()` is displayed, then the cursor point will be exhausted, i.e. it will be pointing to the index after the last document.
    So now if you enter `myCursor` nothing will be displayed.
@@ -85,6 +86,7 @@ By using the above 2 iterators, we will be able to point to all the values (even
 After this iteration, the `myCursor` will be exhausted, so nothing will be displayed when queried again.
 
 7. **toArray**
+   
    This is used to iterate the cursor and return the document in an array.
 
 ```

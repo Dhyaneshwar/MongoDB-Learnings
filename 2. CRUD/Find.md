@@ -91,10 +91,11 @@ A `projection` _cannot_ contain _both_ include and exclude specifications, with 
 ![IT](/Assests/Images/it.jpg)
 
 3. Now, if we type **`it`** the remaining document will be printed.
+   
    Once all the document that are returned by `find()` is displayed, then the cursor point will be exhausted, i.e. it will be pointing to the index after the last document.
    So now if you enter `myCursor` nothing will be displayed.
 
-![Exhausted](/Assests/Images/exhausted.jpg)
+![Exhausted](/Assests/Images/Exhausted.jpg)
 
 4. **while**
 

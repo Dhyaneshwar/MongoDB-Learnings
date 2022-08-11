@@ -57,6 +57,7 @@ A `projection` _cannot_ contain _both_ include and exclude specifications, with 
 - In projections that _explicitly include_ fields, the `_id` field is the only field that you can _explicitly exclude_.
 
   ![Inclusion](/Assests/Images/InclusionProjection.jpg)
+
 - In projections that _explicitly excludes_ fields, the `_id` field is the only field that you can _explicitly include_; however, the `_id` field is included by default.
 
   ![Exclusion](/Assests/Images/ExclusionProjection.jpg)
@@ -72,6 +73,8 @@ A `projection` _cannot_ contain _both_ include and exclude specifications, with 
 
 `let myCursor = db.products.find({},{description:0})`
 
+![Cursor](/Assests/Images/Cursor.jpg)
+
 1. When the stored variable is entered in the shell, then the documents will be displayed.
    > \> myCursor
    >
@@ -84,9 +87,15 @@ A `projection` _cannot_ contain _both_ include and exclude specifications, with 
    > ... (first 20 documents are displayed)
    >
    > \>Type **it** for more
-3. Now, if we either type **`it`** or once again type the user cursor variable, `myCursor`, the remaining document will be printed.
+
+![IT](/Assests/Images/it.jpg)
+
+3. Now, if we type **`it`** the remaining document will be printed.
    Once all the document that are returned by `find()` is displayed, then the cursor point will be exhausted, i.e. it will be pointing to the index after the last document.
    So now if you enter `myCursor` nothing will be displayed.
+
+![Exhausted](/Assests/Images/exhausted.jpg)
+
 4. **while**
 
 ```

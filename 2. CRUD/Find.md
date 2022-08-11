@@ -40,6 +40,25 @@ db.Products.find({},{_id:0,description:0})
 
 _[{ name:"Chair", price: "$120" }, { name:"Book", price: "$50" }, { name:"Car", price: "$5000" }]_
 
+### Projections
+
+The `projection` parameter determines which fields are returned in the matching documents.
+As we can see in the above example the projection parameter was set for _\_id_ and _description_ as 0. This refers to exclusion.
+Thats why the _\_id_ and _description_ are not present in the result.
+
+#### `_id` Field Projection
+
+The `_id` field is included in the returned documents by default unless you explicitly specify `_id: 0` in the projection to suppress the field.
+
+#### Inclusion or Exclusion
+
+A `projection` _cannot_ contain _both_ include and exclude specifications, with the exception of the `_id` field:
+
+- In projections that _explicitly include_ fields, the `_id` field is the only field that you can _explicitly exclude_.
+  <img src="/Assests/Images/InclusionProjection.jpg" alt="Inclusion" width=50% height=50%>
+- In projections that _explicitly excludes_ fields, the `_id` field is the only field that you can _explicitly include_; however, the `_id` field is included by default.
+  <img src="/Assests/Images/ExclusionProjection.jpg" alt="Exclusion" width=50% height=50%>
+
 ## Understanding CURSOR
 
 - The `db.collection.find()` method returns a **cursor**.
@@ -61,7 +80,7 @@ _[{ name:"Chair", price: "$120" }, { name:"Book", price: "$50" }, { name:"Car", 
    > {\_id: 3, name: "Car", price: $5000}
 2. If the collection is having more than 20 documents, then when we type `myCursor` in the shell, we get:-
    > ... (first 20 documents are displayed)
-   > 
+   >
    > \>Type **it** for more
 3. Now, if we either type **`it`** or once again type the user cursor variable, `myCursor`, the remaining document will be printed.
    Once all the document that are returned by `find()` is displayed, then the cursor point will be exhausted, i.e. it will be pointing to the index after the last document.
@@ -86,7 +105,7 @@ By using the above 2 iterators, we will be able to point to all the values (even
 After this iteration, the `myCursor` will be exhausted, so nothing will be displayed when queried again.
 
 7. **toArray**
-   
+
    This is used to iterate the cursor and return the document in an array.
 
 ```
